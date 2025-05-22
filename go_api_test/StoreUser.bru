@@ -1,0 +1,19 @@
+meta {
+  name: StoreUser
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localApiV1}}/users
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Test User",
+    "email": "test@example.com",
+    "password": "secret"
+  }
+}
